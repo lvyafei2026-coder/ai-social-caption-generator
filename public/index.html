@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Social Media Caption Generator — 3 Caption Variants in Seconds</title>
+<meta name="description" content="Free AI social media caption generator. Enter your topic, choose the platform and tone, get 3 ready-to-post caption variants for Instagram, X, LinkedIn, Facebook, or TikTok.">
+<meta name="keywords" content="ai caption generator, social media caption, instagram caption generator, tiktok caption, linkedin post generator">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#be185d">
+
+<link rel="canonical" href="https://toolara.dev/ai-social-caption-generator/">
+<link rel="alternate" hreflang="en" href="https://toolara.dev/ai-social-caption-generator/">
+<link rel="alternate" hreflang="zh-Hans" href="https://toolara.dev/ai-social-caption-generator/zh/">
+<link rel="alternate" hreflang="x-default" href="https://toolara.dev/ai-social-caption-generator/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Social Media Caption Generator">
+<meta property="og:description" content="Generate 3 ready-to-post caption variants for any social platform.">
+<meta property="og:url" content="https://toolara.dev/ai-social-caption-generator/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI Social Media Caption Generator",
+  "url": "https://toolara.dev/ai-social-caption-generator/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "description": "Free AI tool that generates social media captions for Instagram, X, LinkedIn, Facebook, and TikTok.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="lang-switch">
+    <select id="langSelect" onchange="setLang(this.value)" aria-label="Language">
+      <option value="en">English</option>
+      <option value="zh">简体中文</option>
+    </select>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-badge">📱 AI-powered</div>
+    <h1 data-i18n="title">AI Social Media Caption Generator</h1>
+    <p data-i18n="subtitle">Enter your topic. Get 3 ready-to-post caption variants for any social platform.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card">
+    <h2 class="visually-hidden" data-i18n="calcHeading">Caption generator</h2>
+
+    <label for="topic" data-i18n="topicLabel">What is your post about?</label>
+    <input type="text" id="topic" placeholder="Launching our new matcha latte">
+
+    <label for="details" data-i18n="detailsLabel">Additional details (optional)</label>
+    <textarea id="details" rows="3" placeholder="e.g. Available starting Monday. 20% off for the first week. Made with ceremonial-grade matcha."></textarea>
+
+    <div class="row">
+      <div>
+        <label for="platform" data-i18n="platformLabel">Platform</label>
+        <select id="platform">
+          <option value="instagram" selected data-i18n="platInstagram">Instagram</option>
+          <option value="twitter" data-i18n="platTwitter">X (Twitter)</option>
+          <option value="linkedin" data-i18n="platLinkedIn">LinkedIn</option>
+          <option value="facebook" data-i18n="platFacebook">Facebook</option>
+          <option value="tiktok" data-i18n="platTikTok">TikTok</option>
+          <option value="generic" data-i18n="platGeneric">Generic</option>
+        </select>
+      </div>
+      <div>
+        <label for="tone" data-i18n="toneLabel">Tone</label>
+        <select id="tone">
+          <option value="casual" selected data-i18n="toneCasual">Casual</option>
+          <option value="professional" data-i18n="toneProfessional">Professional</option>
+          <option value="humorous" data-i18n="toneHumorous">Humorous</option>
+          <option value="inspirational" data-i18n="toneInspirational">Inspirational</option>
+          <option value="educational" data-i18n="toneEducational">Educational</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="calc" type="button" id="generateBtn" onclick="generate()" data-i18n="calcBtn">Generate 3 captions</button>
+
+    <div id="loading" class="loading" style="display:none;">
+      <div class="spinner"></div>
+      <div data-i18n="loadingText">Writing your captions...</div>
+    </div>
+
+    <div id="error" class="error" style="display:none;"></div>
+
+    <div id="result" role="region" aria-live="polite">
+      <div class="result-header">
+        <div class="result-label" data-i18n="resultLabel">Your caption variants</div>
+        <button class="copy-btn" type="button" onclick="copyResult()" data-i18n="copyBtn">Copy all</button>
+        <span class="copy-copied" id="copyCopied" data-i18n="copyCopied">Copied!</span>
+      </div>
+      <div class="result-box" id="resultText"></div>
+      <div class="result-meta" id="resultMeta"></div>
+      <div class="result-disclaimer" data-i18n="resultDisclaimer">Review before posting. Adjust hashtags and details to match your actual post.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-i18n="whatIsTitle">What does this tool do?</h2>
+    <p data-i18n="whatIsText">Writing captions takes longer than it should. This tool reads your topic and generates 3 different caption variants formatted for the platform you're posting on — Instagram, X, LinkedIn, Facebook, or TikTok. Each variant takes a different angle so you can pick the one that fits the moment.</p>
+  </section>
+
+  <section>
+    <h2 data-i18n="platformsTitle">How each platform is formatted</h2>
+    <ul>
+      <li data-i18n="plat1"><strong>Instagram</strong> — 1-3 short sentences plus 8-12 hashtags. Visual and conversational.</li>
+      <li data-i18n="plat2"><strong>X (Twitter)</strong> — Under 280 characters including hashtags. Punchy and opinionated.</li>
+      <li data-i18n="plat3"><strong>LinkedIn</strong> — 2-4 sentences. Professional and insightful. Fewer hashtags.</li>
+      <li data-i18n="plat4"><strong>Facebook</strong> — Friendly, community-oriented, ends with a question to drive comments.</li>
+      <li data-i18n="plat5"><strong>TikTok</strong> — Short hook-driven text plus 5-7 hashtags. Sounds like a creator, not a brand.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 data-i18n="faqTitle">Frequently asked questions</h2>
+    <h3 data-i18n="faq1q">Is this tool free?</h3>
+    <p data-i18n="faq1a">Yes. It runs on Cloudflare Workers AI with a free daily quota. Normal use won't hit limits.</p>
+
+    <h3 data-i18n="faq2q">Can I edit the captions?</h3>
+    <p data-i18n="faq2a">You should. The generated captions are a starting point. Add specific details, adjust the hashtags to match your niche, and replace any placeholders with real information.</p>
+
+    <h3 data-i18n="faq3q">Will the hashtags perform well?</h3>
+    <p data-i18n="faq3a">Hashtags generated by AI are reasonable but generic. For best results, mix AI-generated hashtags with 2-3 niche hashtags specific to your account or community. Generic hashtags like #love or #instagood attract bots, not real engagement.</p>
+
+    <h3 data-i18n="faq4q">Is my input stored?</h3>
+    <p data-i18n="faq4a">No. Your topic and details are sent to the AI model for processing and discarded immediately after. Nothing is stored, logged, or used for training.</p>
+
+    <h3 data-i18n="faq5q">Can it write in other languages?</h3>
+    <p data-i18n="faq5a">The model can write in most major languages. Just enter your topic in that language and the output will follow. The interface itself is currently English and Simplified Chinese.</p>
+
+    <div class="disclaimer" data-i18n="disclaimer"><strong>Note:</strong> Captions are drafts. Always review before posting — especially for hashtags and any brand-specific claims.</div>
+  </section>
+</main>
+
+<footer class="footer" data-i18n="footer">Runs on Cloudflare Workers AI. Your text is not stored.</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
