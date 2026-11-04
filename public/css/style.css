@@ -338,3 +338,6 @@ details.faq-item .faq-a p { margin: 0; }
 .related-card span { font-size: 0.78rem; line-height: 1.45; color: var(--muted); }
 @media (max-width: 860px) { .related-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (max-width: 700px) { .use-grid, .related-grid { grid-template-columns: 1fr; } }
+
+/* 官方 Google 按钮容器的 flex 基线 */
+.auth-slot { display: flex; align-items: center; line-height: 0; }
