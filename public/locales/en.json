@@ -48,5 +48,12 @@
   "errTopic": "Please enter a topic (at least 5 characters).",
   "errGeneric": "Something went wrong. Please try again.",
   "errNetwork": "Network error. Please try again.",
-  "errRateLimit": "Too many requests. Please wait a minute and try again."
+  "errRateLimit": "Too many requests. Please wait a minute and try again.",
+  "heroBadge": "📱 Free · 3 variants · 5 platforms",
+  "f1t": "Three angles per run",
+  "f1d": "Every request returns three distinct takes so you can pick the vibe that fits.",
+  "f2t": "Formatted per platform",
+  "f2d": "Instagram hashtags, X length limits, LinkedIn tone — each output respects the platform.",
+  "f3t": "Hashtags included",
+  "f3d": "Ready-to-paste hashtag sets, tuned to the platform you're posting on."
 }
