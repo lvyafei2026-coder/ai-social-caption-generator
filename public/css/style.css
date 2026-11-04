@@ -262,29 +262,94 @@ details.faq-item .faq-a p { margin: 0; }
 .hero-cta::after { content: "\2193"; font-size: 1rem; line-height: 1; opacity: 0.6; }
 .hero-cta:hover { transform: translateY(-1px); box-shadow: 0 14px 34px rgba(0,0,0,0.28); }
 
+/* ===== hero 示例卡 v2：产品 UI 质感 ===== */
 .hero-preview {
+  position: relative;
+  isolation: isolate;
   min-width: 0;
-  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  padding: 18px 20px 20px;
   color: var(--text);
-  border-radius: 16px;
-  padding: 16px 18px 18px;
-  box-shadow: 0 28px 64px rgba(0,0,0,0.30);
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(140deg, color-mix(in srgb, var(--accent) 60%, #fff), rgba(255,255,255,0.30) 46%, color-mix(in srgb, var(--accent) 75%, #fff)) border-box;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.34), 0 2px 6px rgba(0,0,0,0.10);
+}
+.hero-preview::before {
+  content: "";
+  position: absolute; z-index: -1;
+  top: -30px; right: -24px; width: 180px; height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 36%, transparent), transparent 70%);
+  filter: blur(26px);
+  pointer-events: none;
 }
 .hp-bar { display: flex; align-items: center; gap: 10px; padding-bottom: 12px; margin-bottom: 14px; border-bottom: 1px solid #eef0f4; }
-.hp-dots { display: flex; gap: 5px; }
-.hp-dots i { width: 8px; height: 8px; border-radius: 50%; background: #e2e5ea; display: block; }
+.hp-dots { display: flex; gap: 6px; }
+.hp-dots i { width: 9px; height: 9px; border-radius: 50%; display: block; }
+.hp-dots i:nth-child(1) { background: #ff5f57; }
+.hp-dots i:nth-child(2) { background: #febc2e; }
+.hp-dots i:nth-child(3) { background: #28c840; }
 .hp-bar > span:last-child { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #98a0ab; }
-.hp-prompt { display: flex; align-items: flex-start; gap: 9px; background: #f5f6f8; border-radius: 9px; padding: 9px 11px; font-size: 0.8rem; line-height: 1.5; color: #55606e; }
-.hp-label { flex: 0 0 auto; font-size: 0.6rem; font-weight: 800; letter-spacing: 0.1em; color: #9aa3af; padding-top: 2px; }
-.hp-arrow { height: 20px; margin: 6px 0; display: flex; align-items: center; justify-content: center; }
-.hp-arrow::before { content: "\2193"; color: #cdd2d9; font-size: 0.8rem; line-height: 1; }
+.hp-bar::after {
+  content: "0.9s"; margin-left: auto;
+  font-size: 0.62rem; font-weight: 800; letter-spacing: 0.04em;
+  color: color-mix(in srgb, var(--accent) 82%, black);
+  background: color-mix(in srgb, var(--accent) 10%, white);
+  padding: 3px 8px; border-radius: 999px;
+}
+.hp-prompt {
+  display: flex; align-items: flex-start; gap: 9px;
+  background: color-mix(in srgb, var(--accent) 6%, #f6f7f9);
+  border: 1px solid color-mix(in srgb, var(--accent) 14%, transparent);
+  border-radius: 11px; padding: 10px 12px;
+  font-size: 0.8rem; line-height: 1.55; color: #55606e;
+}
+.hp-label {
+  flex: 0 0 auto; margin-top: 1px;
+  font-size: 0.58rem; font-weight: 800; letter-spacing: 0.09em;
+  color: #fff; background: color-mix(in srgb, var(--accent) 62%, black);
+  padding: 3px 7px; border-radius: 6px;
+}
+.hp-arrow {
+  width: 2px; height: 28px; margin: 2px 0 2px 24px;
+  background: linear-gradient(#e3e6ec, color-mix(in srgb, var(--accent) 55%, #e3e6ec));
+  position: relative;
+}
+.hp-arrow::before {
+  content: "\2193";
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 21px; height: 21px; border-radius: 50%;
+  background: #fff; border: 1px solid #e3e6ec;
+  box-shadow: 0 2px 6px rgba(16,24,40,0.12);
+  color: var(--accent); font-size: 0.72rem; font-weight: 800;
+  display: grid; place-items: center;
+}
 .hp-body { white-space: pre-wrap; font-size: 0.88rem; line-height: 1.7; color: #2b2732; }
-.hp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.hp-body::before {
+  content: "";
+  display: block; width: 26px; height: 26px; border-radius: 50%;
+  margin-bottom: 8px;
+  background: #fff url("/images/logo-96.png") center/cover no-repeat;
+  box-shadow: 0 1px 4px rgba(16,24,40,0.20), 0 0 0 2px color-mix(in srgb, var(--accent) 20%, #fff);
+}
+.hp-body::after {
+  content: "";
+  display: inline-block; width: 7px; height: 0.95em;
+  margin-left: 2px; vertical-align: text-bottom;
+  background: var(--accent); border-radius: 2px;
+  animation: hp-caret 1.05s steps(2, start) infinite;
+}
+@keyframes hp-caret { to { visibility: hidden; } }
+.hp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; padding-top: 13px; border-top: 1px dashed #eceef2; }
 .hp-tags span {
-  font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 999px;
+  font-size: 0.7rem; font-weight: 700; padding: 4px 11px; border-radius: 999px;
   background: color-mix(in srgb, var(--accent) 9%, white);
   color: color-mix(in srgb, var(--accent) 88%, black);
 }
+.hp-tags span:first-child::before { content: "\2713\00a0"; }
+@media (max-width: 900px) { .hero-preview::before { display: none; } }
 /* 工具卡起点固定在 y=584，视口越高露出越多，矮屏也不会压到 CTA */
 .wrap { margin-top: calc(584px - 100svh); }
 
