@@ -1,5 +1,16 @@
 {
   "title": "Toolara Captions",
+  "heroTitle": "写出让人停下滑动的文案",
+  "heroCta": "免费试用",
+  "heroPoint1": "每个主题给 3 个版本",
+  "heroPoint2": "针对 5 个平台分别调优",
+  "heroPoint3": "自带话题标签",
+  "heroPreviewLabel": "示例",
+  "heroInputLabel": "输入",
+  "heroInputText": "新品：抹茶拿铁上市",
+  "heroPreviewBody": "新品上架，还是那点执念。\n\n我们的仪式级抹茶终于到了：\n石磨研磨，小批量，一点都不苦。\n\n首周限定，八折。",
+  "heroPreviewTag1": "Instagram",
+  "heroPreviewTag2": "口语",
   "subtitle": "输入主题，生成 3 个可直接发布的社交文案变体，适配任何平台。",
   "calcHeading": "文案生成",
   "topicLabel": "这条帖子讲什么？",
@@ -49,11 +60,13 @@
   "errGeneric": "出错了，请重试。",
   "errNetwork": "网络错误，请重试。",
   "errRateLimit": "请求过于频繁，请稍等一分钟后再试。",
-  "heroBadge": "📱 免费 · 3 种风格 · 5 大平台",
+  "heroBadge": "免费 · 3 个版本 · 5 个平台",
   "f1t": "三种角度任选",
   "f1d": "每次生成 3 条不同角度的文案，总有一条合适。",
   "f2t": "按平台格式化",
   "f2d": "Instagram 标签、X 字数、LinkedIn 语气，各自遵守平台习惯。",
   "f3t": "自带话题标签",
-  "f3d": "直接可粘贴的标签组合，按平台适配。"
+  "f3d": "直接可粘贴的标签组合，按平台适配。",
+  "ph1": "新品：抹茶拿铁上市",
+  "ph2": "例如：周一开始售卖，首周八折，使用仪式级抹茶。"
 }

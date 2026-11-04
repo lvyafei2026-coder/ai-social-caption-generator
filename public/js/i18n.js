@@ -46,6 +46,10 @@ function applyTranslations(t) {
     if (key === 'disclaimer') el.innerHTML = t[key];
     else el.textContent = t[key];
   });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const key = el.getAttribute('data-i18n-ph');
+    if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
+  });
 }
 
 async function initPage() {

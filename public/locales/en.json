@@ -1,5 +1,16 @@
 {
   "title": "Toolara Captions",
+  "heroTitle": "Captions that stop the scroll",
+  "heroCta": "Try it now, free",
+  "heroPoint1": "3 variants per topic",
+  "heroPoint2": "Tuned for 5 platforms",
+  "heroPoint3": "Hashtags included",
+  "heroPreviewLabel": "Example",
+  "heroInputLabel": "INPUT",
+  "heroInputText": "Launching our new matcha latte",
+  "heroPreviewBody": "New drop, same obsession.\n\nOur ceremonial-grade matcha is finally here:\nstone-ground, small batch, zero bitterness.\n\nFirst week only, 20% off.",
+  "heroPreviewTag1": "Instagram",
+  "heroPreviewTag2": "Casual",
   "subtitle": "Enter your topic. Get 3 ready-to-post caption variants for any social platform.",
   "calcHeading": "Caption generator",
   "topicLabel": "What is your post about?",
@@ -49,11 +60,13 @@
   "errGeneric": "Something went wrong. Please try again.",
   "errNetwork": "Network error. Please try again.",
   "errRateLimit": "Too many requests. Please wait a minute and try again.",
-  "heroBadge": "📱 Free · 3 variants · 5 platforms",
+  "heroBadge": "Free · 3 variants · 5 platforms",
   "f1t": "Three angles per run",
   "f1d": "Every request returns three distinct takes so you can pick the vibe that fits.",
   "f2t": "Formatted per platform",
   "f2d": "Instagram hashtags, X length limits, LinkedIn tone — each output respects the platform.",
   "f3t": "Hashtags included",
-  "f3d": "Ready-to-paste hashtag sets, tuned to the platform you're posting on."
+  "f3d": "Ready-to-paste hashtag sets, tuned to the platform you're posting on.",
+  "ph1": "Launching our new matcha latte",
+  "ph2": "e.g. Available starting Monday. 20% off for the first week. Made with ceremonial-grade matcha."
 }

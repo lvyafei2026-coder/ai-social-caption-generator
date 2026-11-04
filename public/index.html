@@ -40,7 +40,7 @@
 }
 </script>
 
-<link rel="stylesheet" href="/css/style.css?v=20261105a">
+<link rel="stylesheet" href="/css/style.css?v=20261105e">
 <style id="footer-groups-css">
 .site-footer-grid{grid-template-columns:minmax(0,0.85fr) minmax(0,2.65fr)!important;gap:40px!important}
 .site-footer-column:nth-child(2){grid-row:1/span 2!important}
@@ -78,24 +78,43 @@
 
 
 <header class="hero">
-
   <div class="hero-inner">
-    <div class="hero-badge" data-i18n="heroBadge">📱 Free · 3 variants · 5 platforms</div>
-    <h1 data-i18n="title">AI Social Media Caption Generator</h1>
-    <p data-i18n="subtitle">Enter your topic. Get 3 ready-to-post caption variants for any social platform.</p>
+    <div class="hero-copy">
+      <div class="hero-badge" data-i18n="heroBadge">Free · 3 variants · 5 platforms</div>
+      <h1 data-i18n="heroTitle">Captions that stop the scroll</h1>
+      <p data-i18n="subtitle">Enter your topic. Get 3 ready-to-post caption variants for any social platform.</p>
+      <ul class="hero-points">
+        <li data-i18n="heroPoint1">3 variants per topic</li>
+        <li data-i18n="heroPoint2">Tuned for 5 platforms</li>
+        <li data-i18n="heroPoint3">Hashtags included</li>
+      </ul>
+      <a class="hero-cta" href="#tool" data-i18n="heroCta">Try it now</a>
+    </div>
+    <div class="hero-preview">
+      <div class="hp-bar"><span class="hp-dots"><i></i><i></i><i></i></span><span data-i18n="heroPreviewLabel">Example</span></div>
+      <div class="hp-prompt"><span class="hp-label" data-i18n="heroInputLabel">INPUT</span><span data-i18n="heroInputText">Launching our new matcha latte</span></div>
+      <div class="hp-arrow"></div>
+      <div class="hp-body" data-i18n="heroPreviewBody">New drop, same obsession.
+
+Our ceremonial-grade matcha is finally here:
+stone-ground, small batch, zero bitterness.
+
+First week only, 20% off.</div>
+      <div class="hp-tags"><span data-i18n="heroPreviewTag1">Instagram</span><span data-i18n="heroPreviewTag2">Casual</span></div>
+    </div>
   </div>
 </header>
 
 <main class="wrap">
-  <section class="card">
+  <section class="card" id="tool">
     <div class="studio"><div class="studio-input">
     <h2 class="visually-hidden" data-i18n="calcHeading">Caption generator</h2>
 
     <label for="topic" data-i18n="topicLabel">What is your post about?</label>
-    <input type="text" id="topic" placeholder="Launching our new matcha latte">
+    <input type="text" id="topic" placeholder="Launching our new matcha latte" data-i18n-ph="ph1">
 
     <label for="details" data-i18n="detailsLabel">Additional details (optional)</label>
-    <textarea id="details" rows="3" placeholder="e.g. Available starting Monday. 20% off for the first week. Made with ceremonial-grade matcha."></textarea>
+    <textarea id="details" rows="3" placeholder="e.g. Available starting Monday. 20% off for the first week. Made with ceremonial-grade matcha." data-i18n-ph="ph2"></textarea>
 
     <div class="row">
       <div>
